@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic Season - Moray AI</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        :root {
+            --color-pink: #FF69B4;
+            --color-royal-blue: #0000cd;
+            --color-turquoise: #20B2AA;
+            --color-light-blue: hsl(202.01deg 100% 60.98%);
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, var(--color-pink), var(--color-royal-blue), var(--color-turquoise), var(--color-light-blue));
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            max-width: 800px;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-align: center;
+            color: var(--color-light-blue);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            animation: slideIn 1s ease-out;
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        .highlight {
+            color: var(--color-pink);
+            font-weight: 600;
+        }
+
+        .seasons {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .season {
+            text-align: center;
+            margin: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .season:hover {
+            transform: scale(1.1);
+        }
+
+        .season-icon {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .season:hover .season-icon {
+            color: white;
+        }
+
+        .etc-icon {
+            font-size: 2rem;
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1.5rem;
+                margin: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            .season {
+                flex-basis: 40%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Magic Season</h1>
+        <p>
+            <span class="highlight">Magic Season est bien plus qu'une fonctionnalité</span> ; c'est une immersion dans l'esprit de chaque saison, faite pour que vous viviez un moment spécial à chaque utilisation. Avec Magic Season, ce qui compte, c'est l'expérience de l'utilisateur. L'IA s'adapte à vos goûts et au moment présent, en apportant une touche de fraîcheur qui évolue avec les saisons et les fêtes.
+        </p>
+        <p>
+            Des thèmes chaleureux en hiver, festifs pour Noël, mystérieux pour Halloween — chaque détail a été pensé pour que votre interaction soit à la fois divertissante et unique. <span class="highlight">Magic Season fait ressortir l'essentiel</span> : vous mettre au cœur de l'expérience, en la rendant plus humaine, vivante et proche de vous.
+        </p>
+        <div class="seasons">
+            <div class="season">
+                <div class="season-icon"><i class="fas fa-ghost" aria-hidden="true"></i></div>
+                <div>Halloween</div>
+            </div>
+            <div class="season">
+                <div class="season-icon"><i class="fas fa-snowflake" aria-hidden="true"></i></div>
+                <div>Hiver</div>
+            </div>
+            <div class="season">
+                <div class="season-icon"><i class="fas fa-gift" aria-hidden="true"></i></div>
+                <div>Noël</div>
+            </div>
+            <div class="season">
+                <div class="season-icon"><i class="fas fa-user-secret" aria-hidden="true"></i></div>
+                <div>Secrets</div>
+            </div>
+        </div>
+        <div class="etc-icon">
+            <i class="fas fa-ellipsis-h" aria-hidden="true"></i>
+        </div>
+    </div>
+</body>
+</html>
